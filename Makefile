@@ -11,9 +11,9 @@ build-local:
 
 
 run-local:
-	docker-compose -f Docker-compose-production.yml up
+	docker-compose -f docker-compose-production.yml up
 
 
 build-production:
-	cd frontend && $(make) build-production
-	cd backend && $(make) build
+	cd frontend && make build-production
+	cd backend && make build
