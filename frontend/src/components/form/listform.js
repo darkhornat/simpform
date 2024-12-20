@@ -60,12 +60,13 @@ function Listform({selectform}) {
       }
       return (
         <form id='showform' className='formhead' onSubmit={handleSubmit}>
-          <Heade text={des.name+" From"}/>
+          <Heade text={des.name+" From"} path={selectform}/>
           <div className='sub'>{des.desc}</div>
           <div className='inputcontainer'>
           {
           label.map((fild)=>(
             <List
+            key={fild}
             list={fild}
             val={formData.fild}
             change={handleChange}
